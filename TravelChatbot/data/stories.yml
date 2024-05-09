@@ -1,0 +1,98 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: plan_trip
+  - action: utter_ask_location
+  - intent: plan_trip_to_location
+    entities:
+    - destination: bangkok
+  - action: action_inform_booked_flight_or_not
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: plan_trip_to_location
+    entities:
+    - destination: bangkok
+  - action: action_inform_booked_flight_or_not
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: plan_trip
+  - action: utter_ask_location
+  - intent: plan_trip_to_location
+    entities:
+    - destination: goa
+  - action: action_inform_booked_flight_or_not
+  - intent: plan_trip_to_location
+    entities:
+    - destination: peru
+  - action: action_inform_booked_flight_or_not
+  - intent: plan_trip_to_location
+    entities:
+    - destination: melbourne
+  - action: action_inform_booked_flight_or_not
+  - intent: plan_trip_to_location
+    entities:
+    - destination: cape Town
+  - action: action_inform_booked_flight_or_not
+
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: plan_trip_to_location
+    entities:
+    - destination: goa
+  - action: action_inform_booked_flight_or_not
+  - intent: plan_trip
+  - action: utter_ask_location
+  - intent: plan_trip_to_location
+    entities:
+    - destination: peru
+  - action: action_inform_booked_flight_or_not
+  - intent: plan_trip_to_location
+    entities:
+    - destination: melbourne
+  - action: action_inform_booked_flight_or_not
+  - intent: plan_trip
+  - action: utter_ask_location
+  - intent: plan_trip_to_location
+    entities:
+    - destination: cape town
+  - action: action_inform_booked_flight_or_not

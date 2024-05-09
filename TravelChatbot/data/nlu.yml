@@ -1,0 +1,321 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: plan_trip
+  examples: |
+    - i would like to plan a trip.
+    - can you help me? I need to plan a trip.
+    - need to travel somewhere.
+    - i would like to plan a vacation.
+    - going on a trip.
+    - book a trip.
+    - need help planning a holiday trip.
+
+- intent: plan_trip_to_location
+  examples: |
+    - i want to go to [Paris](destination).
+    - book a trip to [Bali](destination).
+    - Planning a vacation to the [Maldives](destination).
+    - Can you help me plan a trip to [New York City](destination)?
+    - [Japan](destination) is calling my name! Let's plan a trip.
+    - i'm thinking of a trip to the [Greek Islands](destination).
+    - i am interested in visiting [Ladakh](destination).
+    - Family vacation to [damascus](destination)!
+
+- lookup: destination
+  examples: |
+    - Tokyo
+    - Paris
+    - London
+    - New York City
+    - Los Angeles
+    - Chicago
+    - Toronto
+    - Vancouver
+    - Washington D.C.
+    - Miami
+    - San Francisco
+    - Las Vegas
+    - New Orleans
+    - Boston
+    - Seattle
+    - Denver
+    - Atlanta
+    - Philadelphia
+    - Austin
+    - Montreal
+    - Calgary
+    - Ottawa
+    - Mexico City
+    - Cancún
+    - Playa del Carmen
+    - Tulum
+    - Puerto Vallarta
+    - Cabo San Lucas
+    - Rio de Janeiro
+    - São Paulo
+    - Buenos Aires
+    - Lima
+    - Cusco
+    - Machu Picchu
+    - Cartagena
+    - Bogotá
+    - Quito
+    - Iguazu Falls
+    - Salar de Uyuni
+    - Santiago
+    - Valparaíso
+    - Punta del Este
+    - Galápagos Islands
+    - Amazon Rainforest
+    - Barcelona
+    - Rome
+    - Venice
+    - Florence
+    - Milan
+    - Naples
+    - Cinque Terre
+    - Amsterdam
+    - Berlin
+    - Munich
+    - Frankfurt
+    - Prague
+    - Budapest
+    - Vienna
+    - Paris
+    - Nice
+    - Bordeaux
+    - Lyon
+    - The French Riviera
+    - London
+    - Edinburgh
+    - Dublin
+    - Bath
+    - The Cotswolds
+    - Madrid
+    - Seville
+    - Granada
+    - Lisbon
+    - Porto
+    - Athens
+    - Santorini
+    - Mykonos
+    - Istanbul
+    - Barcelona
+    - Stockholm
+    - Copenhagen
+    - Oslo
+    - Helsinki
+    - St. Petersburg
+    - Moscow
+    - Bangkok
+    - Chiang Mai
+    - Phuket
+    - Krabi
+    - Bali
+    - Lombok
+    - Gili Islands
+    - Nusa Lembongan
+    - Nusa Penida
+    - Singapore
+    - Kuala Lumpur
+    - Langkawi
+    - Penang
+    - Ho Chi Minh City
+    - Hanoi
+    - Hoi An
+    - Nha Trang
+    - Phu Quoc
+    - Angkor Wat
+    - Siem Reap
+    - Seoul
+    - Tokyo
+    - Kyoto
+    - Osaka
+    - Okinawa
+    - Beijing
+    - Shanghai
+    - Xian
+    - Guilin
+    - Great Wall of China
+    - Hong Kong
+    - Mumbai (Bombay)
+    - Delhi
+    - Agra
+    - Jaipur
+    - Kerala
+    - Goa
+    - Dubai
+    - Abu Dhabi
+    - Cape Town
+    - Kruger National Park
+    - Johannesburg
+    - Stellenbosch
+    - Garden Route
+    - Victoria Falls
+    - Zanzibar
+    - Serengeti National Park
+    - Masai Mara National Reserve
+    - Marrakech
+    - Chefchaouen
+    - Essaouira
+    - Fes
+    - Merzouga Desert
+    - Luxor
+    - Pyramids of Giza
+    - Hurghada
+    - Sharm El Sheik
+    - Sydney
+    - Melbourne
+    - Byron Bay
+    - Gold Coast
+    - Japan
+    - France
+    - England
+    - United States (USA)
+    - Canada
+    - Mexico
+    - Brazil
+    - Argentina
+    - Peru
+    - Colombia
+    - Ecuador
+    - Chile
+    - Uruguay
+    - Bolivia
+    - Spain
+    - Italy
+    - Netherlands
+    - Germany
+    - Czech Republic
+    - Hungary
+    - Austria
+    - Ireland
+    - Scotland
+    - Portugal
+    - Greece
+    - Turkey
+    - Sweden
+    - Denmark
+    - Norway
+    - Finland
+    - Russia
+    - Thailand
+    - Indonesia
+    - Singapore
+    - Malaysia
+    - Vietnam
+    - Cambodia
+    - South Korea
+    - China
+    - India
+    - United Arab Emirates (UAE)
+    - South Africa
+    - Zambia
+    - Zimbabwe
+    - Tanzania
+    - Kenya
+    - Morocco
+    - Australia
+    - New Zealand
+    - Costa Rica
+    - Iceland
+    - Egypt
+    - Morocco
+    - Poland
+    - Switzerland
+    - Philippines
+    - Sri Lanka
+    - Nepal
+    - Australia
+    - New Zealand
+
